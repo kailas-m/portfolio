@@ -791,7 +791,7 @@ svg {
 .contact__container {
   row-gap: 3rem;
   padding-bottom: 3rem;
-  padding-inline: 2rem;
+  padding-inline: 1.5rem;
 }
 
 .contact__data {
@@ -822,6 +822,7 @@ svg {
 .contact__data .geometric-box {
   top: 2rem;
   right: 2.5rem;
+  z-index: -1;
 }
 
 .contact__mail {
@@ -1066,6 +1067,10 @@ svg {
   .about__buttons {
     flex-direction: column;
     row-gap: 1rem;
+  }
+
+  .contact__container {
+    padding-inline: 1rem;
   }
 }
 
