@@ -39,27 +39,14 @@ const blurHeader = () => {
 window.addEventListener('scroll', blurHeader)
 
 /*=============== EMAIL JS ===============*/
-// Initialize EmailJS with public key
-// Check if config exists to prevent errors
-if (typeof EMAILJS_CONFIG !== 'undefined') {
-    emailjs.init(EMAILJS_CONFIG.PUBLIC_KEY)
-} else {
-    console.error('EmailJS Config is missing! Make sure assets/js/config.js exists.')
-}
-
 const contactForm = document.getElementById('contact-form'),
     contactMessage = document.getElementById('contact-message')
 
 const sendEmail = (e) => {
     e.preventDefault()
 
-    if (typeof EMAILJS_CONFIG === 'undefined') {
-        contactMessage.textContent = 'Configuration missing ❌'
-        return
-    }
-
-    // serviceID - templateID - #form
-    emailjs.sendForm(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.TEMPLATE_ID, '#contact-form')
+    // serviceID - templateID - #form - publicKey
+    emailjs.sendForm('service_waswszj', 'template_phi83qn', '#contact-form', 'pHuSr5yI-HPxMOVmi')
         .then(() => {
             // Show sent message
             contactMessage.textContent = 'Message sent successfully ✅'
