@@ -791,6 +791,7 @@ svg {
 .contact__container {
   row-gap: 3rem;
   padding-bottom: 3rem;
+  padding-inline: 2rem;
 }
 
 .contact__data {
